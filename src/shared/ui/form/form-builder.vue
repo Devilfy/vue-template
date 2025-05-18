@@ -202,4 +202,3 @@ const inputStyles = cn(
         </Button>
     </form>
 </template>
-@/shared/ui/kit/button

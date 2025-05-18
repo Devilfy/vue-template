@@ -6,9 +6,11 @@ import authApi from "../api/auth";
 import { toast } from "vue-sonner";
 import { ROUTES } from "@/shared/model/routes";
 import type { RegisterFormData } from "./types";
+import { useI18n } from "vue-i18n";
 
 export function useRegister() {
     const { updateUser } = useUser();
+    const { t } = useI18n();
     const session = useSession();
     const router = useRouter();
 
@@ -16,12 +18,12 @@ export function useRegister() {
         mutationFn: authApi.register,
         onSuccess: (data) => {
             session.register(data.accessToken, data.refreshToken);
-            toast.success("register.success");
+            toast.success(t("register.success"));
             updateUser();
             router.push(ROUTES.HOME);
         },
         onError: () => {
-            toast.error("register.error");
+            toast.error(t("register.error"));
         },
     });
 

@@ -4,26 +4,28 @@ import { registerSchema, type RegisterFormData } from "@/features/auth/model/typ
 import type { FormFieldProps } from "@/shared/ui/form/form.types";
 import { computed } from "vue";
 import { useRegister } from "@/features/auth/model/use-register";
+import { useI18n } from "vue-i18n";
 
 const { register, isPending } = useRegister();
+const { t } = useI18n();
 
 const fields: FormFieldProps[] = [
     {
         name: "email",
-        label: "input.email",
+        label: t("input.email"),
         type: "email",
         required: true,
     },
     {
         name: "password",
-        label: "input.password",
+        label: t("input.password"),
         type: "password",
         required: true,
     },
 ];
 
 const submitButton = computed(() => ({
-    text: "register.registerButton",
+    text: t("register.registerButton"),
     isLoading: isPending.value,
 }));
 

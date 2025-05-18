@@ -4,26 +4,28 @@ import { loginSchema, type LoginFormData } from "@/features/auth/model/types";
 import type { FormFieldProps } from "@/shared/ui/form/form.types";
 import { useLogin } from "@/features/auth/model/use-login";
 import { computed } from "vue";
+import { useI18n } from "vue-i18n";
 
 const { login, isPending } = useLogin();
+const { t } = useI18n();
 
 const fields: FormFieldProps[] = [
     {
         name: "email",
-        label: "input.email",
+        label: t("input.email"),
         type: "email",
         required: true,
     },
     {
         name: "password",
-        label: "input.password",
+        label: t("input.password"),
         type: "password",
         required: true,
     },
 ];
 
 const submitButton = computed(() => ({
-    text: "login.loginButton",
+    text: t("login.loginButton"),
     isLoading: isPending.value,
 }));
 

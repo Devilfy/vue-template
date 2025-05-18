@@ -6,9 +6,10 @@ import { ROUTES } from "@/shared/model/routes";
 import type { LoginFormData } from "./types";
 import { toast } from "vue-sonner";
 import { useUser } from "@/services/user/model/use-user";
-
+import { useI18n } from "vue-i18n";
 export function useLogin() {
     const { updateUser } = useUser();
+    const { t } = useI18n();
     const session = useSession();
     const router = useRouter();
 
@@ -16,12 +17,12 @@ export function useLogin() {
         mutationFn: authApi.login,
         onSuccess: (data) => {
             session.login(data.accessToken, data.refreshToken);
-            toast.success("login.success");
+            toast.success(t("login.success"));
             updateUser();
             router.push(ROUTES.HOME);
         },
         onError: () => {
-            toast.error("login.error");
+            toast.error(t("login.error"));
         },
     });
 
