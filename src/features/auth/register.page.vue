@@ -3,6 +3,7 @@ import AuthLayout from "./ui/auth-layout.vue";
 import RegisterForm from "./ui/register-form.vue";
 import { useI18n } from "vue-i18n";
 import { ROUTES } from "@/shared/model/routes";
+
 const { t } = useI18n();
 </script>
 

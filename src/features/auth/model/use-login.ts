@@ -7,6 +7,7 @@ import type { LoginFormData } from "./types";
 import { toast } from "vue-sonner";
 import { useUser } from "@/services/user/model/use-user";
 import { useI18n } from "vue-i18n";
+
 export function useLogin() {
     const { updateUser } = useUser();
     const { t } = useI18n();
