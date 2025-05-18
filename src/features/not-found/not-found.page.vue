@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from "@/shared/ui/kit";
+import { Button } from "@/shared/ui/kit/button";
 import { useRouter } from "vue-router";
 import { ROUTES } from "@/shared/model/routes";
 // import { useI18n } from "vue-i18n";

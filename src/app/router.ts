@@ -7,16 +7,16 @@ const routes = [
         name: "home",
         component: () => import("@/app/app.vue"),
     },
-    // {
-    //     path: ROUTES.LOGIN,
-    //     name: "login",
-    //     component: () => import("@/features/auth/login/login.page.vue"),
-    // },
-    // {
-    //     path: ROUTES.REGISTER,
-    //     name: "register",
-    //     component: () => import("@/features/auth/register/register.page.vue"),
-    // },
+    {
+        path: ROUTES.LOGIN,
+        name: "login",
+        component: () => import("@/features/auth/login.page.vue"),
+    },
+    {
+        path: ROUTES.REGISTER,
+        name: "register",
+        component: () => import("@/features/auth/register.page.vue"),
+    },
     // {
     //     path: ROUTES.PROFILE,
     //     name: "profile",

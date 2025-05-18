@@ -1,0 +1,11 @@
+export { default as Select } from "../select/Select.vue";
+export { default as SelectContent } from "../select/SelectContent.vue";
+export { default as SelectGroup } from "../select/SelectGroup.vue";
+export { default as SelectItem } from "../select/SelectItem.vue";
+export { default as SelectItemText } from "../select/SelectItemText.vue";
+export { default as SelectLabel } from "../select/SelectLabel.vue";
+export { default as SelectScrollDownButton } from "../select/SelectScrollDownButton.vue";
+export { default as SelectScrollUpButton } from "../select/SelectScrollUpButton.vue";
+export { default as SelectSeparator } from "../select/SelectSeparator.vue";
+export { default as SelectTrigger } from "../select/SelectTrigger.vue";
+export { default as SelectValue } from "../select/SelectValue.vue";
