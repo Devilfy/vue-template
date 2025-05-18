@@ -38,8 +38,8 @@ export const ru = {
         email: "Email",
         password: "Пароль",
         required: "Обязательное поле",
-        min: "Минимум {{count}} символов",
-        max: "Максимум {{count}} символов",
+        min: "Минимум 6 символов",
+        max: "Максимум 32 символов",
         email_invalid: "Неверный формат email",
     },
     notFound: {

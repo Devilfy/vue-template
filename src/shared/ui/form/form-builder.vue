@@ -181,7 +181,7 @@ const inputStyles = cn(
                 <p
                     v-if="errors[field.name]"
                     class="text-destructive text-sm mt-1">
-                    {{ errors[field.name] || "Invalid field" }}
+                    {{ $t(errors[field.name] || "Invalid field") }}
                 </p>
             </div>
         </div>

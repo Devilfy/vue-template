@@ -38,8 +38,8 @@ export const en = {
         email: "Email",
         password: "Password",
         required: "Required",
-        min: "Minimum {{count}} characters",
-        max: "Maximum {{count}} characters",
+        min: "Minimum 6 characters",
+        max: "Maximum 32 characters",
         email_invalid: "Invalid email format",
     },
     notFound: {
