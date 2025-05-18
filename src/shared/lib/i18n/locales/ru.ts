@@ -48,4 +48,14 @@ export const ru = {
         back: "Назад",
         home: "На главную",
     },
+    profile: {
+        title: "Профиль",
+        userInfo: "Информация о пользователе",
+        email: "Email",
+        loading: "Загрузка информации о пользователе...",
+    },
+    home: {
+        title: "Devilfy Vue Template",
+        description: "Шаблон для создания современных приложений на Vue 3",
+    },
 };

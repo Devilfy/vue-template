@@ -10,6 +10,8 @@ if (!localStorage.getItem("language")) {
 }
 
 export const i18n = createI18n({
+    legacy: false,
+    globalInjection: true,
     locale: savedLanguage,
     fallbackLocale: defaultLang,
     messages: {

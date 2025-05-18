@@ -24,51 +24,57 @@ const handleLogout = () => {
     <header
         class="h-16 sticky top-0 z-50 bg-background-light dark:bg-background-dark border-b border-accent-light/10 dark:border-accent-dark/10 backdrop-blur-sm">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center gap-8"></div>
+            <div class="flex items-center gap-8">
+                <div
+                    class="text-xl font-bold text-primary-light dark:text-primary-dark cursor-pointer"
+                    @click="router.push(ROUTES.HOME)">
+                    Devilfy
+                </div>
+            </div>
 
             <div class="flex items-center gap-4">
-                <div class="hidden md:flex items-center gap-4">
-                    <div v-if="isAuthenticated && user">
-                        <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <div
+                        v-if="isAuthenticated && user"
+                        class="flex items-center gap-4">
+                        <div
+                            class="flex items-center cursor-pointer rounded-lg transition-all duration-200 hover:bg-accent-light/5 dark:hover:bg-accent-dark/5 p-2"
+                            @click="router.push(`/profile/${user.id}`)">
                             <div
-                                class="flex items-center cursor-pointer rounded-lg transition-all duration-200 hover:bg-accent-light/5 dark:hover:bg-accent-dark/5 p-2"
-                                @click="router.push(`/profile/${user.id}`)">
+                                class="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-primary-light dark:ring-primary-dark">
+                                <div v-if="!user.email"></div>
                                 <div
-                                    class="relative w-8 h-8 rounded-full overflow-hidden ring-2 ring-primary-light dark:ring-primary-dark">
-                                    <div v-if="!user.email"></div>
-                                    <div
-                                        v-else
-                                        class="w-full h-full bg-accent-light/10 dark:bg-accent-dark/10 flex items-center justify-center">
-                                        <span
-                                            class="text-sm font-medium text-text-light dark:text-text-dark">
-                                            {{ user?.email.charAt(0).toUpperCase() }}
-                                        </span>
-                                    </div>
+                                    v-else
+                                    class="w-full h-full bg-accent-light/10 dark:bg-accent-dark/10 flex items-center justify-center">
+                                    <span
+                                        class="text-sm font-medium text-text-light dark:text-text-dark">
+                                        {{ user?.email.charAt(0).toUpperCase() }}
+                                    </span>
                                 </div>
                             </div>
-                            <Button
-                                class="text-sm font-medium text-text-light dark:text-text-dark hover:text-accent-light bg-transparent border border-accent-light/40 dark:border-accent-dark/40 dark:hover:text-accent-dark hover:bg-accent-light/10 dark:hover:bg-accent-dark/10 transition-all duration-200 rounded-lg"
-                                @click="handleLogout">
-                                {{ t("header.logout") }}
-                            </Button>
                         </div>
+                        <Button
+                            class="text-sm font-medium text-text-light dark:text-text-dark hover:text-accent-light bg-transparent border border-accent-light/40 dark:border-accent-dark/40 dark:hover:text-accent-dark hover:bg-accent-light/10 dark:hover:bg-accent-dark/10 transition-all duration-200 rounded-lg"
+                            @click="handleLogout">
+                            {{ t("header.logout") }}
+                        </Button>
                     </div>
 
-                    <div v-else>
-                        <div class="flex items-center gap-3">
-                            <Button
-                                @click="router.push(ROUTES.LOGIN)"
-                                size="lg"
-                                class="text-sm font-medium text-text-light dark:text-text-dark hover:text-primary-light bg-transparent border border-accent-light/40 dark:border-accent-dark/40 hover:bg-accent-light/10 dark:hover:bg-accent-dark/10 transition-all duration-200 rounded-lg">
-                                {{ t("header.login") }}
-                            </Button>
-                            <Button
-                                size="lg"
-                                class="text-sm font-medium bg-primary-light dark:bg-primary-dark text-white hover:bg-accent-light dark:hover:bg-primary-dark/80 transition-all duration-200 rounded-lg"
-                                @click="router.push(ROUTES.REGISTER)">
-                                {{ t("header.register") }}
-                            </Button>
-                        </div>
+                    <div
+                        v-else
+                        class="flex items-center gap-3">
+                        <Button
+                            @click="router.push(ROUTES.LOGIN)"
+                            size="lg"
+                            class="text-sm font-medium text-text-light dark:text-text-dark hover:text-primary-light bg-transparent border border-accent-light/40 dark:border-accent-dark/40 hover:bg-accent-light/10 dark:hover:bg-accent-dark/10 transition-all duration-200 rounded-lg">
+                            {{ t("header.login") }}
+                        </Button>
+                        <Button
+                            size="lg"
+                            class="text-sm font-medium bg-primary-light dark:bg-primary-dark text-white hover:bg-accent-light dark:hover:bg-primary-dark/80 transition-all duration-200 rounded-lg"
+                            @click="router.push(ROUTES.REGISTER)">
+                            {{ t("header.register") }}
+                        </Button>
                     </div>
 
                     <div

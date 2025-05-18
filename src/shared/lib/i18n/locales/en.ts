@@ -48,4 +48,15 @@ export const en = {
         back: "Go Back",
         home: "Home",
     },
+    profile: {
+        title: "Profile",
+        userInfo: "User Information",
+        email: "Email",
+        loading: "Loading profile information...",
+    },
+    home: {
+        title: "Devilfy Vue Template",
+        description:
+            "A modern, responsive Vue 3 application template with authentication, i18n, and theming.",
+    },
 };
