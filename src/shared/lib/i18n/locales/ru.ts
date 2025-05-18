@@ -57,5 +57,25 @@ export const ru = {
     home: {
         title: "Devilfy Vue Template",
         description: "Шаблон для создания современных приложений на Vue 3",
+        profile: "Перейти в профиль",
+        vue3: {
+            title: "Vue 3 с TypeScript",
+            description:
+                "Сделан с использованием Vue 3 Composition API и TypeScript для безопасности типов.",
+        },
+        authentication: {
+            title: "Аутентификация",
+            description:
+                "Полная система аутентификации с входом, регистрацией и защитой маршрутов.",
+        },
+        i18n: {
+            title: "i18n",
+            description: "Поддержка междунаролизации и локализации.",
+        },
+        theming: {
+            title: "Тема",
+            description:
+                "Поддержка тем с автоматическим определением и ручным переключением для светлой и темной темы.",
+        },
     },
 };

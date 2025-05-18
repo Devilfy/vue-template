@@ -58,5 +58,23 @@ export const en = {
         title: "Devilfy Vue Template",
         description:
             "A modern, responsive Vue 3 application template with authentication, i18n, and theming.",
+        profile: "Go to Profile",
+        vue3: {
+            title: "Vue 3 with TypeScript",
+            description: "Built using Vue 3 Composition API and TypeScript for type safety.",
+        },
+        authentication: {
+            title: "Authentication",
+            description:
+                "Complete authentication system with login, register, and route protection.",
+        },
+        i18n: {
+            title: "i18n",
+            description: "Internationalization and localization support.",
+        },
+        theming: {
+            title: "Theming",
+            description: "Dark and light theme support with Tailwind CSS.",
+        },
     },
 };

@@ -28,7 +28,7 @@ const { isAuthenticated, user } = useUser();
                             size="lg"
                             class="text-sm font-medium bg-primary-light dark:bg-primary-dark text-white hover:bg-accent-light dark:hover:bg-primary-dark/80 transition-all duration-200 rounded-lg"
                             @click="router.push(ROUTES.PROFILE.replace(':id', user?.id ?? ''))">
-                            Go to Profile
+                            {{ t("home.profile") }}
                         </Button>
                     </div>
                 </div>
@@ -36,24 +36,29 @@ const { isAuthenticated, user } = useUser();
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-card rounded-lg p-6 shadow-sm">
-                    <h2 class="text-xl font-semibold mb-3">Vue 3 with TypeScript</h2>
+                    <h2 class="text-xl font-semibold mb-3">
+                        {{ t("home.vue3.title") }}
+                    </h2>
                     <p class="text-muted-foreground">
-                        Built using Vue 3 Composition API and TypeScript for type safety.
+                        {{ t("home.vue3.description") }}
                     </p>
                 </div>
 
                 <div class="bg-card rounded-lg p-6 shadow-sm">
-                    <h2 class="text-xl font-semibold mb-3">Authentication</h2>
+                    <h2 class="text-xl font-semibold mb-3">
+                        {{ t("home.authentication.title") }}
+                    </h2>
                     <p class="text-muted-foreground">
-                        Complete authentication system with login, register, and route protection.
+                        {{ t("home.authentication.description") }}
                     </p>
                 </div>
 
                 <div class="bg-card rounded-lg p-6 shadow-sm">
-                    <h2 class="text-xl font-semibold mb-3">Light & Dark Mode</h2>
+                    <h2 class="text-xl font-semibold mb-3">
+                        {{ t("home.theming.title") }}
+                    </h2>
                     <p class="text-muted-foreground">
-                        Automatic theme detection with manual toggle for light and dark mode
-                        preferences.
+                        {{ t("home.theming.description") }}
                     </p>
                 </div>
             </div>
