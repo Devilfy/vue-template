@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { Button } from "@/shared/ui/kit";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
-    <h1 class="text-3xl font-bold underline">Hello World</h1>
-    <Button>Click me</Button>
+    <div class="min-h-screen bg-background-light dark:bg-background-dark">
+        <RouterView />
+    </div>
 </template>
 
 <style scoped></style>
